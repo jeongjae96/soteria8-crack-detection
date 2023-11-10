@@ -1,5 +1,5 @@
 ---
-name: 'Issue: Backlog Template'
+name: Backlog Template
 about: 기본 issue template입니다.
 title: ''
 labels: 'status: not started'
