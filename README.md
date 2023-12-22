@@ -43,7 +43,7 @@ $ pip install -r requirements.txt
 ### 4. 모델 
 
 
-yolo-v8 best.pt<a hef ='https://miaow-miaow.tistory.com/83'></a>
+yolo-v8 best.pt<a href ='https://miaow-miaow.tistory.com/83'></a>
 훈련된 모델의 가중치를 사용하기 위해 다운로드가 필요합니다.
 
 ### 5. 벤치마크 정보
