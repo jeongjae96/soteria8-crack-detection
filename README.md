@@ -54,7 +54,7 @@ yolo-v8 [best.pt](https://miaow-miaow.tistory.com/83)
 훈련된 모델의 가중치를 사용하기 위해 다운로드가 필요합니다.
 
 ### 5. 벤치마크 정보
-<img src="jeongjae96/soteria8-crack-detection/image.png" width="200px" height="200px">
+<img src="jeongjae96/soteria8-crack-detection/yolo_benchmark.jpg" width="650px" height="250px">
 
 
 ### 6. Image Retrieval
