@@ -78,10 +78,13 @@ yolo-v8 [best.pt](https://drive.google.com/file/d/18uMUQbhpCTUYfNQVFi3A95VYFdwdd
 
 
 ### 7. 최종 결과물 예시
+<img src="https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/report_sample.jpg?raw=true"
+width="675px" height="350px">
 
 
 
-
+### 8. Further Experiment
+https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/further_experiment.jpg?raw=true
 
 
 <br>
