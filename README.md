@@ -40,17 +40,26 @@ $ pip install -r requirements.txt
 
 ### 3. 훈련 데이터 명세
 
+yolo-v8모델의 훈련 데이터 정보는 아래와 같습니다.<br>
+|Dataset|Num total|TrainSet|ValidSet|Instances|
+|:--:|:--:|:--:|:--:|:--:|
+후가공데이터|712|569|143|499(150,307,42)|
+
+AI hub의 건물 균열 탐지 오픈소스 [데이터](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=162)중 test환경과 유사한 이미지를 선별하여 라벨링하여 사용하였습니다.
+
 ### 4. 모델 
 
 
-yolo-v8 best.pt<a href ='https://miaow-miaow.tistory.com/83'></a>
+yolo-v8 [best.pt](https://miaow-miaow.tistory.com/83)
 훈련된 모델의 가중치를 사용하기 위해 다운로드가 필요합니다.
 
 ### 5. 벤치마크 정보
+<img src="jeongjae96/soteria8-crack-detection/image.png" width="200px" height="200px">
 
-### 6. Image Retireval
 
-### 7. 최종 결과물
+### 6. Image Retrieval
+
+### 7. 최종 결과물 예시
 
 
 
@@ -68,7 +77,7 @@ yolo-v8 best.pt<a href ='https://miaow-miaow.tistory.com/83'></a>
 - (2) 1차위험이 있는 이상징후 포착
 - (3) 일정시간 이후 이상징후의 진전 여부 탐지
 
-![Alt text](image.png)
+
 
 3. 훈련 데이터 명세
 
@@ -79,6 +88,7 @@ yolo-v8(best.pt)
 훈련된 모델의 가중치를 사용하기 위해 다운로드가 필요합니다.
 
 5. 벤치마크 정보
+
 
 6. Image Retireval
 
