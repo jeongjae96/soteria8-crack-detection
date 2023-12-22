@@ -65,12 +65,13 @@ AI hub의 건물 균열 탐지 오픈소스 <a href="https://aihub.or.kr/aihubda
 ### 4. 모델 
 
 
-yolo-v8 [best.pt](https://miaow-miaow.tistory.com/83)
+yolo-v8 [best.pt](https://drive.google.com/file/d/18uMUQbhpCTUYfNQVFi3A95VYFdwdd27z/view)
 훈련된 모델의 가중치를 사용하기 위해 다운로드가 필요합니다.
 
 ### 5. 벤치마크 정보
 <img src="https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/yolo_benchmark.jpg?raw=true" width="750px" height="400px">
 
+<br>
 모든 클래스에 대해 전반적으로 우수한 성능을 보이는 xlarge모델 선택 이후 Augmentation 및 hyper-parameter tunning 진행
 
 ### 6. Image Retrieval
