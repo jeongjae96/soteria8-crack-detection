@@ -30,7 +30,7 @@ $ pip install -r requirements.txt
 - (2) 1차위험이 있는 이상징후 포착
 - (3) 일정시간 이후 이상징후의 진전 여부 탐지
 
-![Alt text](image.png)
+![Alt text](jeongjae96/soteria8-crack-detection/images/workflow.jpg)
 
 > 1.이전 촬영 영상과 일정 시간이 지난 뒤의 촬영 영상(비교군)을 input으로 설정합니다.<br>
 > 2.각 영상을 frame단위로 slicing하여 segmentation model의 입력값으로 넣습니다.<br>
