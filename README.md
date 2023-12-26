@@ -1,26 +1,22 @@
 # 이어드림 스쿨 3기 스타트업 연계 프로젝트
-### DS 3팀 - 시간의 흐름에 따른 노후 인프라시설 건축물의 외관과 내부 Crack 감지 (소테리아에이트)
+### DS 3팀 - 시간의 흐름에 따른 노후 인프라시설 건축물의 외관과 내부 Crack 감지
 - Project Peroid : 23.11.08~23.12.15
 - Team : 맘에들었조
 - Member : 양태경, 김다현, 임승준, 이지윤, 이종은, 박정재
-
-## Topic
-- instance segmentation, image retrieval
+- Topic : instance segmentation, image retrieval
 
 
 
-## Modeling Framework
-- detectron2, ultralytics
 
 
-## Requirements
-you need to install our requirment packages
-```python
-$ pip install -r requirements.txt
-```
+
 
 ## 소개
 ### 1. 문제 정의
+<center>
+<img src="https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/security_check.png?raw=true">
+</center>
+<br>
 콘크리트 내의 이상징후(철근노출, Bleeding)은 구조물 성능 감소로 인한 안전성 저하, 수분 침투에 의한 철근 부식, 외관 해침으로 인한 불안감 유발 등의 원인이 된다.
 
 콘크리트 구조물에서의 이상징후 관리를 위해서는 정기적인 육안 검사를 통해 균열의 위치, 폭, 길이와 같은 정보를 취득하고 이를 정보화된 형태로 관리하여야 한다. 
@@ -32,7 +28,7 @@ $ pip install -r requirements.txt
 
 안전 진단 입력이 직접 장비(초음파 등)을 이용하여 건물을 전역적으로 탐색해야 하나, 중대재해 안전 진단을 위한 예산과 인력의 부족한 상황이기 때문에 이를 세부적으로 확인하는데 어려움이 있다. 
 
-soteria8에서는 이상징후를 사전에 진단할 수 있는 로보틱스 촬영 기반 컴퓨터 비전 안전진단 솔루션(이하 ’스마트 솔루션’)을 제시하고 이를 통해 손쉽게 포착한다면 경제적인 효과를 거둘 수 있을 것으로 예상된다.
+이상징후를 사전에 진단할 수 있는 로보틱스 촬영 기반 컴퓨터 비전 안전진단 솔루션(이하 ’스마트 솔루션’)을 제시하고 이를 통해 손쉽게 포착한다면 경제적인 효과를 거둘 수 있을 것으로 예상된다.
 
 
 ### 3. 문제 접근 방법
@@ -51,22 +47,22 @@ soteria8에서는 이상징후를 사전에 진단할 수 있는 로보틱스 �
 
 ### 3. 훈련 데이터 명세
 
-yolo-v8모델의 훈련 데이터 정보는 아래와 같습니다.<br><br>
+yolo-v8모델의 훈련 데이터 정보는 아래와 같다.<br><br>
 |DataSet|Num total|TrainSet|ValidSet|Instances|
 |:--:|:--:|:--:|:--:|:--:|
 후가공데이터|712|569|143|499(150,307,42)|
 
 <br>
-cf) instances : 전체(철근노출,화이트블리딩,레드블리딩)<br><br>
-AI hub의 건물 균열 탐지 오픈소스 <a href="https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=162">데이터</a>
- 중 test환경과 유사한 이미지를 선별하여 라벨링하여 사용하였습니다.<br>
+
+(cf) **Instances** : 전체(철근노출,화이트블리딩,레드블리딩)<br>
+AI hub의 건물 균열 탐지 오픈소스 <a href="https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=162">데이터</a> 중 test환경과 유사한 이미지를 선별하여 라벨링하여 사용하였다.
+
 
 
 ### 4. 모델 
 
-
 yolo-v8 [best.pt](https://drive.google.com/file/d/18uMUQbhpCTUYfNQVFi3A95VYFdwdd27z/view)
-훈련된 모델의 가중치를 사용하기 위해 다운로드가 필요합니다.
+훈련된 모델의 가중치를 사용하기 위해 **다운로드**가 필요합니다.
 
 ### 5. 벤치마크 정보
 <img src="https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/yolo_benchmark.jpg?raw=true" width="750px" height="400px">
@@ -75,16 +71,27 @@ yolo-v8 [best.pt](https://drive.google.com/file/d/18uMUQbhpCTUYfNQVFi3A95VYFdwdd
 모든 클래스에 대해 전반적으로 우수한 성능을 보이는 xlarge모델 선택 이후 Augmentation 및 hyper-parameter tunning 진행
 
 ### 6. Image Retrieval
+> Feature Extractor관련 Pytorch docs ("https://pytorch.org/blog/FX-feature-extraction-torchvision/")
+
+pre-trained EfficientNet_b4 모델을 feature extractor로써 사용하여 이미지 유사도를 비교하였다.
+
+
+
+<img src="https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/results.jpg?raw=true" width="750px" height="400px">
+
 
 
 ### 7. 최종 결과물 예시
+<center>
 <img src="https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/report_sample.jpg?raw=true"
-width="675px" height="350px">
+width="675px" height="230px"></center>
+Image Retrieval을 통해 동일한 Instance를 추적한 뒤, 면적 비교량을 위와같이 제시할 수 있다.
 
 
 
 ### 8. Further Experiment
-https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/further_experiment.jpg?raw=true
+<img src="https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/further_experiment.jpg?raw=true">
+강건하지 않은 성능은 훈련 데이터의 부족과, 리소스적인 한계를 보완하면 Segmentation model의 더 나은 결과를 제시할 수 있을 것이다.
 
 
 <br>
@@ -111,21 +118,30 @@ https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/further_
 
 
 
-
-
-
 ***
-### Directory
-<!--Table-->
+## 개발문서
+
+------.py 설명 추가 ------------- 
+<!--Table
 |Category|Description|
 |:--:|:--:|
 |yolo|cell2|
 |frame_matching|cell2|
 |demo.py|Cell2|
 |results.txt|Cell2|
+-->
+## 사용하는 방법
+1. CUDA & CuDNN, Python, Pytorch를 차례로 설치해야 합니다. 새로운 가상환경에서 진행하는 것을 권장합니다.
+2. requierments.txt 다운로드 후 아래의 명령어를 입력합니다.
+>requirements : you need to install our requirment packages
+```python
+$ pip install -r requirements.txt
+```
+3. ------.py 설명 추가 ------------- 
 
 
 
 ***
-### Acknowledgement
-We refer to the following website to implement our models ("site")
+## Acknowledgement
+We refer to the following website to implement our models ("https://github.com/ultralytics/ultralytics")
+
