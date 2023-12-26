@@ -13,9 +13,9 @@
 
 ## 소개
 ### 1. 문제 정의
-<center>
+<p align="center">
 <img src="https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/security_check.png?raw=true">
-</center>
+</p>
 <br>
 콘크리트 내의 이상징후(철근노출, Bleeding)은 구조물 성능 감소로 인한 안전성 저하, 수분 침투에 의한 철근 부식, 외관 해침으로 인한 불안감 유발 등의 원인이 된다.
 
@@ -82,16 +82,16 @@ pre-trained EfficientNet_b4 모델을 feature extractor로써 사용하여 이�
 
 
 ### 7. 최종 결과물 예시
-<center>
-<img src="https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/report_sample.jpg?raw=true"
-width="675px" height="230px"></center>
+
+<p align="center"><img src="https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/report_sample.jpg?raw=true"
+width="675px" height="230px"></p>
 Image Retrieval을 통해 동일한 Instance를 추적한 뒤, 면적 비교량을 위와같이 제시할 수 있다.
 
 
 
 ### 8. Further Experiment
 <img src="https://github.com/jeongjae96/soteria8-crack-detection/blob/main/images/further_experiment.jpg?raw=true">
-강건하지 않은 성능은 훈련 데이터의 부족과, 리소스적인 한계를 보완하면 Segmentation model의 더 나은 결과를 제시할 수 있을 것이다.
+훈련 데이터의 부족과 리소스적인 한계를 보완하면, 더 정교한 Segmentation model을 통해 더 정확한 Image Matching과 더 정확한 이상 징후 Segmentation Map을 얻고, 더욱 강건한 결과를 제시할 수 있을 것이다.
 
 
 <br>
